@@ -1,0 +1,8 @@
+[package]
+name = "retro6502"
+version = "0.1.0"
+authors = ["Salim Alam"]
+
+[dependencies]
+clap = "2"
+ncurses = "5.80.0"
