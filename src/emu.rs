@@ -19,8 +19,8 @@ fn write_io_byte(val: u8) {
     let mut maxx: i32 = 0;
     let mut maxy: i32 = 0;
 
-    getmaxyx(stdscr, &mut maxy, &mut maxx);
-    getyx(stdscr, &mut cury, &mut curx);
+    getmaxyx(stdscr(), &mut maxy, &mut maxx);
+    getyx(stdscr(), &mut cury, &mut curx);
 
     match val {
         13 => {
@@ -52,7 +52,7 @@ pub fn execute(code: &Vec<u8>,
     initscr();
     start_color();
     init_pair(1, COLOR_WHITE, COLOR_BLUE);
-    wbkgd(stdscr, COLOR_PAIR(1));
+    wbkgd(stdscr(), COLOR_PAIR(1));
     noecho();
     timeout(10);
     clear();
